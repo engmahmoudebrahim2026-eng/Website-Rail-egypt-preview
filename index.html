@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ريل مصر — Rail Egypt</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+      <div class="logo" onclick="showPage('home')">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 17l2-8h14l2 8" />
+            <rect x="2" y="17" width="20" height="3" rx="1" />
+            <path d="M7 17v-4h10v4" />
+            <circle cx="7" cy="20.5" r="1.5" />
+            <circle cx="17" cy="20.5" r="1.5" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span id="logo-main">ريل مصر</span>
+          <span>RAIL EGYPT</span>
+        </div>
+      </div>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navCollapse">
+        <i class="fas fa-bars" style="color:var(--primary)"></i>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navCollapse">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0 gap-1" id="mainNavLinks">
+          <li class="nav-link">
+            <a onclick="showPage('home')" id="nav-home">الرئيسية</a>
+          </li>
+          <li class="nav-link">
+            <a onclick="showPage('search')" id="nav-search">ابحث عن رحلة</a>
+          </li class="nav-link">
+          <li class="nav-link">
+            <a onclick="showPage('dashboard')" id="nav-dash">حجوزاتي</a>
+          </li>
+          <li class="nav-link">
+            <a onclick="showPage('contact')" id="nav-contact">تواصل معنا</a>
+          </li>
+          <li class="nav-link">
+            <a onclick="showPage('admin')" id="nav-admin">Admin</a>
+          </li>
+
+        </ul>
+        <div class="nav-right">
+          <button class="theme-btn" onclick="toggleTheme()" title="Dark Mode">🌙</button>
+          <button class="cta-btn" onclick="showPage('login')">
+            <svg viewBox="0 0 24 24"
+              style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round">
+              <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3" />
+            </svg>
+            تسجيل الدخول
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HOME PAGE ═══════════════════ -->
+  <div id="page-home" class="page active">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=1600&q=85" alt="قطار"
+          loading="eager" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge fade-up"><span></span> الحجز الإلكتروني الرسمي للسكك الحديدية</div>
+          <h1 class="fade-up delay-1">سافر بسرعة<br><span class="gold-text">الحلم عبر مصر</span></h1>
+          <p class="fade-up delay-2">احجز تذكرتك عبر الإنترنت في ثوانٍ. أكثر من 120 رحلة يومية بين المحافظات بأفضل
+            الأسعار وأعلى معايير الراحة والأمان.</p>
+          <div class="hero-stats fade-up delay-3">
+            <div class="stat">
+              <div class="stat-num">+2M</div>
+              <div class="stat-lbl">مسافر سنوياً</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">+50</div>
+              <div class="stat-lbl">محطة</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">120+</div>
+              <div class="stat-lbl">رحلة يومية</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">98%</div>
+              <div class="stat-lbl">رضا العملاء</div>
+            </div>
+          </div>
+          <div class="trust-badges fade-up delay-4">
+            <span class="trust-badge"><svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>حجز فوري</span>
+            <span class="trust-badge"><svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>دفع آمن 100%</span>
+            <span class="trust-badge"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>دعم 24/7</span>
+            <span class="trust-badge"><svg viewBox="0 0 24 24">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>4.8/5 تقييم</span>
+          </div>
+        </div>
+        <!-- Search Card -->
+        <div class="search-card fade-up delay-2">
+          <h2><svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>ابحث عن رحلتك</h2>
+          <div class="field-row">
+            <div class="field">
+              <label>من</label>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <select id="h-from">
+                <option value="">اختر المحطة</option>
+                <option value="CAI" selected>القاهرة</option>
+                <option value="ALX">الإسكندرية</option>
+                <option value="LXR">الأقصر</option>
+                <option value="ASW">أسوان</option>
+                <option value="MNS">المنصورة</option>
+                <option value="TAN">طنطا</option>
+              </select>
+            </div>
+            <button class="swap-btn" onclick="swapStations()">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" />
+              </svg>
+            </button>
+            <div class="field">
+              <label>إلى</label>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <select id="h-to">
+                <option value="">اختر المحطة</option>
+                <option value="CAI">القاهرة</option>
+                <option value="ALX">الإسكندرية</option>
+                <option value="LXR" selected>الأقصر</option>
+                <option value="ASW">أسوان</option>
+                <option value="MNS">المنصورة</option>
+                <option value="TAN">طنطا</option>
+              </select>
+            </div>
+          </div>
+          <div class="three-col">
+            <div class="field">
+              <label>تاريخ السفر</label>
+              <svg class="icon" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              <input type="date" id="h-date" style="padding-right:12px" />
+            </div>
+            <div class="field">
+              <label>المسافرون</label>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
+              <select>
+                <option>1 مسافر</option>
+                <option>2 مسافرون</option>
+                <option>3 مسافرون</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>الدرجة</label>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+              <select>
+                <option>الكل</option>
+                <option>درجة أولى</option>
+                <option>درجة مكيفة</option>
+                <option>درجة ثانية</option>
+              </select>
+            </div>
+          </div>
+          <button class="search-submit" onclick="showPage('search')">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            ابحث عن الرحلات المتاحة
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section style="background:#fff;padding:80px 0">
+      <div class="section" style="padding-top:0;padding-bottom:0">
+        <div style="text-align:center;margin-bottom:48px">
+          <span class="sec-badge">لماذا ريل مصر؟</span>
+          <h2 class="sec-title" style="text-align:center">كل ما تحتاجه في مكان واحد</h2>
+          <p class="sec-sub" style="text-align:center">منصتنا مصممة لتجعل تجربة سفرك بالقطار أسهل وأكثر متعة</p>
+        </div>
+        <div class="features-grid">
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#F59E0B,#EF4444)"><svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg></div>
+            <div class="feat-title">حجز فوري</div>
+            <div class="feat-desc">احجز تذكرتك في أقل من دقيقة من خلال واجهة سهلة ومبسطة.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#10B981,#0D9488)"><svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
+            <div class="feat-title">دفع آمن</div>
+            <div class="feat-desc">جميع معاملاتك محمية بأحدث تقنيات التشفير وبروتوكولات الأمان.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#3B82F6,#4F46E5)"><svg viewBox="0 0 24 24">
+                <rect x="1" y="4" width="22" height="16" rx="2" />
+                <path d="M1 10h22" />
+              </svg></div>
+            <div class="feat-title">وسائل دفع متعددة</div>
+            <div class="feat-desc">بطاقات ائتمان، محافظ إلكترونية، إنترنت بنكي، ودفع في المحطة.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)"><svg viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <path d="M12 18h.01" />
+              </svg></div>
+            <div class="feat-title">تذكرة إلكترونية</div>
+            <div class="feat-desc">استقبل تذكرتك على هاتفك مباشرة مع رمز QR للدخول السريع.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#EF4444,#F97316)"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg></div>
+            <div class="feat-title">متاح 24/7</div>
+            <div class="feat-desc">احجز في أي وقت من اليوم دون الحاجة للتوجه إلى مكتب التذاكر.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#F59E0B,#D97706)"><svg viewBox="0 0 24 24">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg></div>
+            <div class="feat-title">نقاط المكافآت</div>
+            <div class="feat-desc">اكسب نقاطاً مع كل رحلة واستبدلها بتذاكر مجانية وخصومات حصرية.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#06B6D4,#3B82F6)"><svg viewBox="0 0 24 24">
+                <path
+                  d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg></div>
+            <div class="feat-title">حجز جماعي</div>
+            <div class="feat-desc">احجز لعائلتك أو مجموعتك بسهولة في جلسة واحدة بأسعار مخصصة.</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon" style="background:linear-gradient(135deg,#84CC16,#10B981)"><svg viewBox="0 0 24 24">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg></div>
+            <div class="feat-title">تتبع الرحلة</div>
+            <div class="feat-desc">تابع موقع قطارك في الوقت الفعلي واحصل على تنبيهات التأخير.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <div class="offers-section">
+      <div class="offers-inner">
+        <div
+          style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:12px">
+          <div>
+            <span
+              style="display:inline-block;background:rgba(232,184,75,.15);border:1px solid rgba(232,184,75,.3);color:var(--gold-500);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:10px">عروض
+              حصرية</span>
+            <h2 class="sec-title">أحدث العروض والخصومات</h2>
+          </div>
+          <button onclick="showPage('search')"
+            style="background:transparent;border:none;color:var(--navy-600);font-family:'Cairo';font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px">عرض
+            الكل ←</button>
+        </div>
+        <div class="offers-grid">
+          <div class="offer-card" onclick="showPage('search')">
+            <div class="offer-inner" style="background:linear-gradient(135deg,#F59E0B,#EA580C)"><span
+                class="offer-badge">عرض محدود</span>
+              <div class="offer-discount"><span>20%</span><span>خصم</span></div>
+              <div class="offer-title">خصم الصيف</div>
+              <div class="offer-desc">استمتع بخصم 20% على رحلات الأقصر وأسوان طوال شهر يوليو</div>
+              <div class="offer-footer"><span class="offer-date">ينتهي 31 يوليو</span><button class="offer-cta">احجز
+                  الآن</button></div>
+            </div>
+          </div>
+          <div class="offer-card" onclick="showPage('search')">
+            <div class="offer-inner" style="background:linear-gradient(135deg,#2563EB,#4338CA)"><span
+                class="offer-badge">جديد</span>
+              <div class="offer-discount"><span>25%</span><span>خصم</span></div>
+              <div class="offer-title">رحلة عائلية</div>
+              <div class="offer-desc">4 تذاكر بسعر 3 عند الحجز لمجموعة عائلية في درجة أولى</div>
+              <div class="offer-footer"><span class="offer-date">ينتهي 15 أغسطس</span><button class="offer-cta">احجز
+                  الآن</button></div>
+            </div>
+          </div>
+          <div class="offer-card" onclick="showPage('search')">
+            <div class="offer-inner" style="background:linear-gradient(135deg,#059669,#0D9488)"><span
+                class="offer-badge">أسبوعي</span>
+              <div class="offer-discount"><span>15%</span><span>خصم</span></div>
+              <div class="offer-title">ويك إند</div>
+              <div class="offer-desc">خصم 15% على جميع رحلات الجمعة والسبت والأحد</div>
+              <div class="offer-footer"><span class="offer-date">ينتهي 1 سبتمبر</span><button class="offer-cta">احجز
+                  الآن</button></div>
+            </div>
+          </div>
+          <div class="offer-card" onclick="showPage('search')">
+            <div class="offer-inner" style="background:linear-gradient(135deg,#7C3AED,#DB2777)"><span
+                class="offer-badge">توفير أكبر</span>
+              <div class="offer-discount"><span>30%</span><span>خصم</span></div>
+              <div class="offer-title">الحجز المبكر</div>
+              <div class="offer-desc">احجز قبل 30 يوم واحصل على خصم 30% في الدرجة المكيفة</div>
+              <div class="offer-footer"><span class="offer-date">ينتهي 31 ديسمبر</span><button class="offer-cta">احجز
+                  الآن</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-cta">
+          <div>
+            <h3>هل تحتاج مساعدة في الحجز؟</h3>
+            <p>فريق دعمنا متاح 24/7 لمساعدتك في كل خطوة</p>
+          </div>
+          <div class="footer-cta-btns">
+            <button class="fcta-btn"><svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.5a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L9.91 14a16 16 0 006 6l.35-.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg> 19370</button>
+            <button class="fcta-btn" onclick="showPage('contact')"><svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg> راسلنا</button>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">
+              <div class="logo-icon"><svg viewBox="0 0 24 24">
+                  <path d="M3 17l2-8h14l2 8" />
+                  <rect x="2" y="17" width="20" height="3" rx="1" />
+                  <path d="M7 17v-4h10v4" />
+                  <circle cx="7" cy="20.5" r="1.5" />
+                  <circle cx="17" cy="20.5" r="1.5" />
+                </svg></div>
+              <div class="logo-text"><span>ريل مصر</span><span>RAIL EGYPT</span></div>
+            </div>
+            <p>منصة حجز تذاكر القطارات المصرية الرائدة. رحلات آمنة ومريحة إلى أكثر من 50 محطة في جميع أنحاء مصر.</p>
+            <div class="social-row"><button class="soc-btn">f</button><button class="soc-btn">t</button><button
+                class="soc-btn">in</button><button class="soc-btn">▶</button></div>
+          </div>
+          <div class="footer-col">
+            <h4>الخدمات</h4>
+            <ul>
+              <li><a>البحث عن رحلة</a></li>
+              <li><a>تتبع القطار</a></li>
+              <li><a>رحلات جماعية</a></li>
+              <li><a>عربات النوم</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>الدعم</h4>
+            <ul>
+              <li><a onclick="showPage('contact')">المساعدة والدعم</a></li>
+              <li><a>الأسئلة الشائعة</a></li>
+              <li><a>سياسة الإلغاء</a></li>
+              <li><a>شروط الاستخدام</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>الشركة</h4>
+            <ul>
+              <li><a>من نحن</a></li>
+              <li><a onclick="showPage('contact')">اتصل بنا</a></li>
+              <li><a>الوظائف</a></li>
+              <li><a>الأخبار</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 ريل مصر. جميع الحقوق محفوظة.</p>
+          <div class="footer-links"><a>سياسة الخصوصية</a><a>شروط الاستخدام</a><a>خريطة الموقع</a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════ SEARCH PAGE ═══════════════════ -->
+  <div id="page-search" class="page">
+    <div class="search-header">
+      <div class="search-header-inner">
+        <div class="route-display">
+          <svg style="width:20px;height:20px;stroke:var(--gold-400);fill:none;stroke-width:2;stroke-linecap:round"
+            viewBox="0 0 24 24">
+            <path d="M3 17l2-8h14l2 8" />
+            <rect x="2" y="17" width="20" height="3" rx="1" />
+            <path d="M7 17v-4h10v4" />
+            <circle cx="7" cy="20.5" r="1.5" />
+            <circle cx="17" cy="20.5" r="1.5" />
+          </svg>
+          <span>القاهرة</span><span class="arrow">←</span><span>الأقصر</span>
+          <span style="color:rgba(255,255,255,.45);font-size:13px;font-weight:500">· الثلاثاء 15 يوليو 2025</span>
+        </div>
+        <div class="compact-search">
+          <select style="min-width:120px">
+            <option>القاهرة</option>
+            <option>الإسكندرية</option>
+          </select>
+          <span style="color:var(--gold-400);font-size:18px">⇌</span>
+          <select style="min-width:120px">
+            <option>الأقصر</option>
+            <option>أسوان</option>
+          </select>
+          <input type="date" value="2025-07-15" style="min-width:130px" />
+          <select>
+            <option>1 مسافر</option>
+            <option>2 مسافرون</option>
+          </select>
+          <button onclick="showToast('جاري تحديث النتائج…','success')">🔍 بحث</button>
+        </div>
+      </div>
+    </div>
+    <div class="results-area">
+      <!-- Filters -->
+      <aside class="filter-panel">
+        <div class="filter-title">🔽 الفلاتر</div>
+        <div class="filter-section">
+          <h4>الدرجة</h4>
+          <label class="radio-opt"><input type="radio" name="cls" checked /><span>الكل</span></label>
+          <label class="radio-opt"><input type="radio" name="cls" /><span>درجة أولى</span></label>
+          <label class="radio-opt"><input type="radio" name="cls" /><span>درجة مكيفة</span></label>
+          <label class="radio-opt"><input type="radio" name="cls" /><span>درجة ثانية</span></label>
+          <label class="radio-opt"><input type="radio" name="cls" /><span>نوم</span></label>
+        </div>
+        <div class="filter-section">
+          <h4>نوع القطار</h4>
+          <label class="radio-opt"><input type="radio" name="typ" checked /><span>الكل</span></label>
+          <label class="radio-opt"><input type="radio" name="typ" /><span>فائق السرعة</span></label>
+          <label class="radio-opt"><input type="radio" name="typ" /><span>سريع</span></label>
+          <label class="radio-opt"><input type="radio" name="typ" /><span>عادي</span></label>
+          <label class="radio-opt"><input type="radio" name="typ" /><span>نوم</span></label>
+        </div>
+        <div class="filter-section">
+          <h4>وقت المغادرة</h4>
+          <label class="radio-opt"><input type="radio" name="tim" checked /><span>أي وقت</span></label>
+          <label class="radio-opt"><input type="radio" name="tim" /><span>الصباح (6-12)</span></label>
+          <label class="radio-opt"><input type="radio" name="tim" /><span>الظهيرة (12-18)</span></label>
+          <label class="radio-opt"><input type="radio" name="tim" /><span>المساء (18-24)</span></label>
+        </div>
+      </aside>
+      <!-- Results -->
+      <div>
+        <div class="toolbar">
+          <div class="results-count">
+            <h1>8 رحلات متاحة</h1>
+            <p>القاهرة إلى الأقصر · الثلاثاء 15 يوليو</p>
+          </div>
+          <div class="sort-select"><svg style="width:14px;height:14px;stroke:#64748b;fill:none;stroke-width:2"
+              viewBox="0 0 24 24">
+              <path d="M3 6h18M7 12h10M11 18h2" />
+            </svg><select>
+              <option>ترتيب: وقت المغادرة</option>
+              <option>السعر (الأقل)</option>
+              <option>مدة الرحلة</option>
+            </select></div>
+        </div>
+        <div class="trips-list" id="trips-list">
+          <!-- Trip cards injected by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ TRIP DETAIL PAGE ═══════════════════ -->
+  <div id="page-trip" class="page">
+    <div class="detail-hero">
+      <div class="detail-inner">
+        <div class="back-btn" onclick="showPage('search')"><svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>العودة لنتائج البحث</div>
+        <div class="detail-train-info">
+          <div class="detail-icon"><svg viewBox="0 0 24 24">
+              <path d="M3 17l2-8h14l2 8" />
+              <rect x="2" y="17" width="20" height="3" rx="1" />
+              <path d="M7 17v-4h10v4" />
+              <circle cx="7" cy="20.5" r="1.5" />
+              <circle cx="17" cy="20.5" r="1.5" />
+            </svg></div>
+          <div>
+            <div class="detail-train-name">نجم الصعيد — رقم 981</div>
+            <div class="detail-route">القاهرة ← الأقصر · الثلاثاء 15 يوليو 2025</div>
+          </div>
+          <span
+            style="margin-right:auto;background:rgba(232,184,75,.2);border:1px solid rgba(232,184,75,.3);color:var(--gold-400);font-size:12px;padding:5px 12px;border-radius:20px;font-weight:700">فائق
+            السرعة</span>
+        </div>
+      </div>
+    </div>
+    <div class="detail-page">
+      <!-- Time info -->
+      <div class="detail-section">
+        <div class="big-time-row">
+          <div class="text-right">
+            <div class="big-time">07:00</div>
+            <div class="big-city">القاهرة</div>
+            <div style="font-size:12px;color:var(--slate-400)">محطة مصر</div>
+          </div>
+          <div class="big-mid">
+            <div class="big-dur"><svg style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2"
+                viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>5 ساعات 30 دقيقة</div>
+            <div class="big-line"></div>
+            <div style="font-size:10px;color:var(--slate-400);margin-top:4px">مباشر · بدون توقف</div>
+          </div>
+          <div class="text-left">
+            <div class="big-time">12:30</div>
+            <div class="big-city">الأقصر</div>
+            <div style="font-size:12px;color:var(--slate-400)">محطة الأقصر</div>
+          </div>
+        </div>
+      </div>
+      <!-- Class selection -->
+      <div class="detail-section">
+        <h3>اختر الدرجة</h3>
+        <div class="classes-grid">
+          <div class="class-btn" onclick="selectClass(this,'درجة أولى','272')">
+            <span class="class-name class-first">درجة أولى</span>
+            <div class="class-price-old">320 ج</div>
+            <div class="class-price">272 ج</div>
+            <div class="class-seats"><svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                <path d="M16 3.13a4 4 0 010 7.75" />
+              </svg>12 مقعد متاح</div>
+          </div>
+          <div class="class-btn selected" onclick="selectClass(this,'درجة مكيفة','161')">
+            <div class="check"><svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg></div>
+            <span class="class-name class-ac">درجة مكيفة</span>
+            <div class="class-price-old">190 ج</div>
+            <div class="class-price">161 ج</div>
+            <div class="class-seats"><svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                <path d="M16 3.13a4 4 0 010 7.75" />
+              </svg>28 مقعد متاح</div>
+          </div>
+          <div class="class-btn" onclick="selectClass(this,'درجة ثانية','80')">
+            <span class="class-name class-second">درجة ثانية</span>
+            <div class="class-price">80 ج</div>
+            <div class="class-seats"><svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>45 مقعد متاح</div>
+          </div>
+        </div>
+      </div>
+      <!-- Seat selector -->
+      <div class="seat-selector">
+        <h3 style="font-size:15px;font-weight:900;color:var(--navy-800);margin-bottom:16px">اختيار المقعد</h3>
+        <div class="car-tabs">
+          <button class="car-tab active" onclick="switchCar(1,this)">1</button>
+          <button class="car-tab" onclick="switchCar(2,this)">2</button>
+          <button class="car-tab" onclick="switchCar(3,this)">3</button>
+          <button class="car-tab" onclick="switchCar(4,this)">4</button>
+        </div>
+        <div class="legend">
+          <div class="leg-item">
+            <div class="seat-box box-av"></div><span>متاح</span>
+          </div>
+          <div class="leg-item">
+            <div class="seat-box box-oc"></div><span>محجوز</span>
+          </div>
+          <div class="leg-item">
+            <div class="seat-box box-sel"></div><span>مختار</span>
+          </div>
+        </div>
+        <div class="train-nose"><span>مقدمة القطار</span></div>
+        <div class="seat-grid" id="seat-grid"></div>
+        <div class="seat-selected-summary" id="seat-summary" style="display:none">
+          <span>المقعد المختار</span>
+          <span id="seat-summary-text"></span>
+        </div>
+      </div>
+      <!-- Booking bar -->
+      <div class="booking-bar">
+        <div class="booking-total">
+          <div class="lbl">إجمالي السعر</div>
+          <div class="price" id="detail-price">161 ج</div>
+        </div>
+        <div style="font-size:12px;color:var(--slate-400);display:flex;align-items:center;gap:5px"><svg
+            style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v4M12 16h.01" />
+          </svg>قابلة للإلغاء قبل 24 ساعة باسترداد 80%</div>
+        <button class="proceed-btn" onclick="showPage('booking')">أكمل الحجز</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ BOOKING PAGE ═══════════════════ -->
+  <div id="page-booking" class="page">
+    <div style="background:var(--navy-800);padding:80px 24px 28px">
+      <div style="max-width:900px;margin:0 auto">
+        <h1 style="font-size:22px;font-weight:900;color:#fff;margin-bottom:20px">إتمام الحجز</h1>
+        <!-- Steps -->
+        <div style="display:flex;align-items:center;gap:0" id="booking-steps">
+          <div style="display:flex;align-items:center;gap:8px;color:#fff">
+            <div id="step-0"
+              style="width:32px;height:32px;border-radius:50%;background:var(--gold-400);color:var(--navy-900);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0">
+              1</div>
+            <span style="font-size:13px;font-weight:700">بيانات المسافر</span>
+          </div>
+          <div class="step-line" style="flex:1;height:2px;background:rgba(255,255,255,.2);margin:0 12px"></div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5)">
+            <div id="step-1"
+              style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0">
+              2</div>
+            <span style="font-size:13px;font-weight:700">مراجعة الحجز</span>
+          </div>
+          <div class="step-line" style="flex:1;height:2px;background:rgba(255,255,255,.2);margin:0 12px"></div>
+          <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5)">
+            <div id="step-2"
+              style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);color:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0">
+              3</div>
+            <span style="font-size:13px;font-weight:700">الدفع</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:900px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:1fr 320px;gap:20px">
+      <div>
+        <!-- Step panels -->
+        <div id="bstep-0">
+          <div
+            style="background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:24px;margin-bottom:16px">
+            <h3
+              style="font-size:16px;font-weight:900;color:var(--navy-800);margin-bottom:20px;display:flex;align-items:center;gap:8px">
+              <svg style="width:18px;height:18px;stroke:var(--gold-400);fill:none;stroke-width:2;stroke-linecap:round"
+                viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              بيانات المسافر
+            </h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+              <div><label
+                  style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">الاسم
+                  الأول</label><input
+                  style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                  placeholder="محمد" value="محمد" /></div>
+              <div><label
+                  style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">اسم
+                  العائلة</label><input
+                  style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                  placeholder="إبراهيم" value="إبراهيم" /></div>
+            </div>
+            <div style="margin-bottom:14px"><label
+                style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">رقم الهوية
+                الوطنية</label><input
+                style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                placeholder="28501010123456" value="28501010123456" maxlength="14" /></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+              <div><label
+                  style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">رقم
+                  الهاتف</label><input
+                  style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                  value="01012345678" /></div>
+              <div><label
+                  style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">البريد
+                  الإلكتروني</label><input
+                  style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                  value="mohammed@example.com" /></div>
+            </div>
+          </div>
+          <button onclick="goBookingStep(1)"
+            style="width:100%;background:var(--navy-600);color:#fff;font-family:'Cairo';font-weight:900;font-size:15px;padding:14px;border-radius:14px;border:none;cursor:pointer;transition:.2s">التالي:
+            مراجعة الحجز →</button>
+        </div>
+        <div id="bstep-1" style="display:none">
+          <div
+            style="background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:24px;margin-bottom:16px">
+            <h3 style="font-size:16px;font-weight:900;color:var(--navy-800);margin-bottom:20px">مراجعة بيانات الحجز</h3>
+            <div id="review-rows"></div>
+          </div>
+          <div style="display:flex;gap:12px">
+            <button onclick="goBookingStep(0)"
+              style="display:flex;align-items:center;gap:6px;padding:12px 20px;border:1px solid var(--slate-200);border-radius:12px;background:#fff;font-family:'Cairo';font-weight:700;cursor:pointer;color:var(--slate-700)">←
+              السابق</button>
+            <button onclick="goBookingStep(2)"
+              style="flex:1;background:var(--navy-600);color:#fff;font-family:'Cairo';font-weight:900;font-size:14px;padding:13px;border-radius:12px;border:none;cursor:pointer">التالي:
+              الدفع →</button>
+          </div>
+        </div>
+        <div id="bstep-2" style="display:none">
+          <div
+            style="background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:24px;margin-bottom:16px">
+            <h3 style="font-size:16px;font-weight:900;color:var(--navy-800);margin-bottom:20px">طريقة الدفع</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px">
+              <button onclick="selectPayment(this)" class="pay-opt"
+                style="padding:12px;border-radius:12px;border:2px solid var(--navy-600);background:#EEF2FF;font-family:'Cairo';font-weight:800;font-size:12px;cursor:pointer;color:var(--navy-700)">💳
+                بطاقة ائتمان</button>
+              <button onclick="selectPayment(this)" class="pay-opt"
+                style="padding:12px;border-radius:12px;border:2px solid var(--slate-200);background:#fff;font-family:'Cairo';font-weight:800;font-size:12px;cursor:pointer;color:var(--slate-600)">📱
+                محفظة إلكترونية</button>
+              <button onclick="selectPayment(this)" class="pay-opt"
+                style="padding:12px;border-radius:12px;border:2px solid var(--slate-200);background:#fff;font-family:'Cairo';font-weight:800;font-size:12px;cursor:pointer;color:var(--slate-600)">💵
+                نقداً</button>
+            </div>
+            <div><label
+                style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">رقم
+                البطاقة</label><input
+                style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Outfit';font-size:14px;font-weight:600;outline:none;margin-bottom:12px;letter-spacing:2px"
+                value="4532 1234 5678 9012" /></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div><label
+                  style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">تاريخ
+                  الانتهاء</label><input
+                  style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Outfit';font-size:14px;font-weight:600;outline:none"
+                  value="08/27" /></div>
+              <div><label
+                  style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">CVV</label><input
+                  style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Outfit';font-size:14px;font-weight:600;outline:none"
+                  value="***" /></div>
+            </div>
+            <div
+              style="display:flex;align-items:center;gap:6px;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:12px 14px;margin-top:14px;font-size:12px;color:var(--slate-500)">
+              🔒 جميع بياناتك محمية بتشفير SSL من 256-bit</div>
+          </div>
+          <div style="display:flex;gap:12px">
+            <button onclick="goBookingStep(1)"
+              style="display:flex;align-items:center;gap:6px;padding:12px 20px;border:1px solid var(--slate-200);border-radius:12px;background:#fff;font-family:'Cairo';font-weight:700;cursor:pointer;color:var(--slate-700)">←
+              السابق</button>
+            <button onclick="confirmBooking()"
+              style="flex:1;background:var(--gold-400);color:var(--navy-900);font-family:'Cairo';font-weight:900;font-size:15px;padding:14px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,184,75,.3)">✓
+              تأكيد الحجز والدفع</button>
+          </div>
+        </div>
+      </div>
+      <!-- Summary card -->
+      <div
+        style="background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:20px;height:fit-content;position:sticky;top:84px">
+        <h3 style="font-size:14px;font-weight:900;color:var(--navy-800);margin-bottom:16px">ملخص الرحلة</h3>
+        <div id="booking-summary-rows"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ TICKET PAGE ═══════════════════ -->
+  <div id="page-ticket" class="page">
+    <div class="ticket-success-bar">
+      <div class="success-icon"><svg viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12" />
+        </svg></div>
+      <h1 style="font-size:20px;font-weight:900;color:#fff">تم تأكيد حجزك بنجاح!</h1>
+      <p style="color:rgba(255,255,255,.8);margin-top:4px;font-size:13px">رقم الحجز: <strong
+          style="font-family:'Outfit';letter-spacing:2px">EGR-2025-A1B2</strong></p>
+    </div>
+    <div class="ticket-page-inner">
+      <div class="ticket-actions">
+        <button class="t-btn-primary" onclick="showToast('جاري تحميل التذكرة…','success')"><svg viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>تحميل PDF</button>
+        <button class="t-btn-secondary" onclick="showToast('تم نسخ رابط التذكرة ✓','success')"><svg viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>مشاركة</button>
+      </div>
+      <div class="ticket">
+        <div class="ticket-header">
+          <div class="ticket-header-top">
+            <div class="t-logo">
+              <div class="t-logo-icon"><svg viewBox="0 0 24 24">
+                  <path d="M3 17l2-8h14l2 8" />
+                  <rect x="2" y="17" width="20" height="3" rx="1" />
+                  <path d="M7 17v-4h10v4" />
+                  <circle cx="7" cy="20.5" r="1.5" />
+                  <circle cx="17" cy="20.5" r="1.5" />
+                </svg></div>
+              <div class="t-logo-txt"><span style="font-size:16px;font-weight:900;color:#fff">ريل مصر</span><span
+                  style="font-size:9px;color:var(--gold-400);letter-spacing:2px;font-family:'Outfit'">RAIL EGYPT</span>
+              </div>
+            </div>
+            <div style="text-align:left">
+              <div class="t-ref-lbl">رقم الحجز</div>
+              <div class="t-ref">EGR-2025-A1B2</div>
+            </div>
+          </div>
+          <div class="t-route-row">
+            <div>
+              <div class="t-time">07:00</div>
+              <div class="t-city">القاهرة</div>
+            </div>
+            <div class="t-mid"><svg viewBox="0 0 24 24">
+                <path d="M3 17l2-8h14l2 8" />
+                <rect x="2" y="17" width="20" height="3" rx="1" />
+                <path d="M7 17v-4h10v4" />
+              </svg>
+              <div class="t-mid-line"></div>
+              <div class="t-dur">5 ساعات 30 دقيقة</div>
+            </div>
+            <div style="text-align:left">
+              <div class="t-time">12:30</div>
+              <div class="t-city">الأقصر</div>
+            </div>
+          </div>
+        </div>
+        <div class="ticket-details-row">
+          <div class="t-detail">
+            <div class="t-detail-icon"><svg viewBox="0 0 24 24">
+                <path d="M3 17l2-8h14l2 8" />
+                <rect x="2" y="17" width="20" height="3" rx="1" />
+              </svg></div>
+            <div class="t-detail-lbl">القطار</div>
+            <div class="t-detail-val">نجم الصعيد</div>
+          </div>
+          <div class="t-detail">
+            <div class="t-detail-icon"><svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg></div>
+            <div class="t-detail-lbl">الدرجة</div>
+            <div class="t-detail-val">درجة مكيفة</div>
+          </div>
+          <div class="t-detail">
+            <div class="t-detail-icon"><svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg></div>
+            <div class="t-detail-lbl">التاريخ</div>
+            <div class="t-detail-val">15 يوليو 2025</div>
+          </div>
+        </div>
+        <div class="ticket-main">
+          <div class="t-info">
+            <div class="t-info-row">
+              <div class="t-info-icon"><svg viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg></div>
+              <div>
+                <div class="t-info-lbl">المسافر</div>
+                <div class="t-info-val">محمد إبراهيم</div>
+              </div>
+            </div>
+            <div class="t-info-row">
+              <div class="t-info-icon"><svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg></div>
+              <div>
+                <div class="t-info-lbl">المقعد</div>
+                <div class="t-info-val">عربة 2 — مقعد 14</div>
+              </div>
+            </div>
+            <div class="t-price">
+              <div class="t-price-lbl">إجمالي المدفوع</div>
+              <div class="t-price-val">161 ج.م</div>
+            </div>
+          </div>
+          <div class="qr-wrap">
+            <div class="qr-box"><canvas id="qr-canvas" width="98" height="98"></canvas></div>
+            <div class="qr-lbl">امسح للتحقق من التذكرة</div>
+          </div>
+        </div>
+        <div class="ticket-perf"></div>
+        <div class="ticket-footer">
+          <span class="t-footer-txt">ريل مصر · railegypt.gov.eg</span>
+          <span class="t-status"><svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>مؤكد</span>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:20px"><button onclick="showPage('dashboard')"
+          style="background:transparent;border:none;color:var(--navy-600);font-family:'Cairo';font-weight:700;cursor:pointer;font-size:13px">عرض
+          جميع حجوزاتي →</button></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ DASHBOARD ═══════════════════ -->
+  <div id="page-dashboard" class="page">
+    <div class="dash-header">
+      <div class="dash-header-inner">
+        <div class="user-row">
+          <div class="user-avatar">م</div>
+          <div>
+            <div class="user-name">محمد إبراهيم</div>
+            <div class="user-email">mohammed@example.com · عضو منذ 2024</div>
+            <div class="user-badges"><span class="gold-member">⭐ عضو ذهبي</span><span
+                style="color:rgba(255,255,255,.5);font-size:12px">850 نقطة</span></div>
+          </div>
+          <div style="margin-right:auto;display:flex;gap:8px">
+            <button
+              style="width:36px;height:36px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center">⚙️</button>
+            <button onclick="showPage('login')"
+              style="width:36px;height:36px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center">🚪</button>
+          </div>
+        </div>
+        <div class="dash-stats">
+          <div class="dash-stat">
+            <div class="dash-stat-num" style="color:var(--gold-400)">12</div>
+            <div class="dash-stat-lbl">إجمالي الرحلات</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-num" style="color:#34D399">2</div>
+            <div class="dash-stat-lbl">رحلات قادمة</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-num" style="color:#A78BFA">850</div>
+            <div class="dash-stat-lbl">نقاط المكافآت</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-num" style="color:#60A5FA">3,420 ج</div>
+            <div class="dash-stat-lbl">إجمالي الإنفاق</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dash-body">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchDashTab(this,'tab-bookings')"><svg viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>حجوزاتي</button>
+        <button class="tab-btn" onclick="switchDashTab(this,'tab-profile')"><svg viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>بياناتي</button>
+        <button class="tab-btn" onclick="switchDashTab(this,'tab-wallet')"><svg viewBox="0 0 24 24">
+            <rect x="1" y="4" width="22" height="16" rx="2" />
+            <path d="M1 10h22" />
+          </svg>المحفظة</button>
+        <button class="tab-btn" onclick="switchDashTab(this,'tab-points')"><svg viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>النقاط</button>
+      </div>
+      <div id="tab-bookings">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+          <h2 style="font-size:17px;font-weight:900;color:var(--navy-800)">جميع الحجوزات</h2>
+          <button onclick="showPage('search')"
+            style="background:transparent;border:none;color:var(--navy-600);font-family:'Cairo';font-weight:700;font-size:13px;cursor:pointer">+
+            حجز جديد</button>
+        </div>
+        <div class="booking-item">
+          <div class="booking-top">
+            <div class="booking-icon-wrap">
+              <div class="booking-icon"><svg viewBox="0 0 24 24"
+                  style="width:20px;height:20px;stroke:var(--navy-600);fill:none;stroke-width:2;stroke-linecap:round">
+                  <path d="M3 17l2-8h14l2 8" />
+                  <rect x="2" y="17" width="20" height="3" rx="1" />
+                  <path d="M7 17v-4h10v4" />
+                </svg></div>
+              <div>
+                <div class="booking-route">القاهرة ← الأقصر</div>
+                <div class="booking-meta"><span><svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" />
+                    </svg>07:00 · 15 يوليو 2025</span><span><svg viewBox="0 0 24 24">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>مقعد 14</span></div>
+              </div>
+            </div>
+            <div class="booking-right">
+              <span class="status-badge st-confirmed">مؤكد</span>
+              <div style="text-align:left">
+                <div class="booking-price">161 ج</div>
+                <div class="booking-class">درجة مكيفة</div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-bottom">
+            <span class="booking-ref">#EGR-2025-A1B2</span>
+            <div class="booking-actions">
+              <button class="view-ticket-btn" onclick="showPage('ticket')"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>عرض التذكرة</button>
+              <button class="cancel-btn">إلغاء</button>
+            </div>
+          </div>
+        </div>
+        <div class="booking-item">
+          <div class="booking-top">
+            <div class="booking-icon-wrap">
+              <div class="booking-icon"><svg viewBox="0 0 24 24"
+                  style="width:20px;height:20px;stroke:var(--navy-600);fill:none;stroke-width:2;stroke-linecap:round">
+                  <path d="M3 17l2-8h14l2 8" />
+                  <rect x="2" y="17" width="20" height="3" rx="1" />
+                  <path d="M7 17v-4h10v4" />
+                </svg></div>
+              <div>
+                <div class="booking-route">القاهرة ← الإسكندرية</div>
+                <div class="booking-meta"><span><svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" />
+                    </svg>06:00 · 20 يونيو 2025</span><span><svg viewBox="0 0 24 24">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>مقعد 7</span></div>
+              </div>
+            </div>
+            <div class="booking-right">
+              <span class="status-badge st-expired">منتهي</span>
+              <div style="text-align:left">
+                <div class="booking-price">180 ج</div>
+                <div class="booking-class">درجة أولى</div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-bottom">
+            <span class="booking-ref">#EGR-2024-C3D4</span>
+            <div class="booking-actions"><button class="cancel-btn">حذف</button></div>
+          </div>
+        </div>
+        <div class="booking-item">
+          <div class="booking-top">
+            <div class="booking-icon-wrap">
+              <div class="booking-icon"><svg viewBox="0 0 24 24"
+                  style="width:20px;height:20px;stroke:var(--navy-600);fill:none;stroke-width:2;stroke-linecap:round">
+                  <path d="M3 17l2-8h14l2 8" />
+                  <rect x="2" y="17" width="20" height="3" rx="1" />
+                </svg></div>
+              <div>
+                <div class="booking-route">القاهرة ← أسوان (نوم)</div>
+                <div class="booking-meta"><span><svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" />
+                    </svg>20:00 · 15 يوليو 2025</span><span><svg viewBox="0 0 24 24">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>غرفة 3</span></div>
+              </div>
+            </div>
+            <div class="booking-right">
+              <span class="status-badge st-confirmed">مؤكد</span>
+              <div style="text-align:left">
+                <div class="booking-price">520 ج</div>
+                <div class="booking-class">عربة نوم</div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-bottom">
+            <span class="booking-ref">#EGR-2025-E5F6</span>
+            <div class="booking-actions">
+              <button class="view-ticket-btn" onclick="showPage('ticket')"><svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>عرض التذكرة</button>
+              <button class="cancel-btn">إلغاء</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab-profile" style="display:none">
+        <div style="background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:24px">
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy-800);margin-bottom:20px">بيانات الحساب</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div><label
+                style="display:block;font-size:11px;font-weight:700;color:var(--slate-400);margin-bottom:5px">الاسم
+                الأول</label><input
+                style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:10px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                value="محمد" /></div>
+            <div><label
+                style="display:block;font-size:11px;font-weight:700;color:var(--slate-400);margin-bottom:5px">اسم
+                العائلة</label><input
+                style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:10px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                value="إبراهيم" /></div>
+            <div><label
+                style="display:block;font-size:11px;font-weight:700;color:var(--slate-400);margin-bottom:5px">البريد
+                الإلكتروني</label><input
+                style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:10px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                value="mohammed@example.com" /></div>
+            <div><label
+                style="display:block;font-size:11px;font-weight:700;color:var(--slate-400);margin-bottom:5px">رقم
+                الهاتف</label><input
+                style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:10px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+                value="01012345678" /></div>
+          </div>
+          <button onclick="showToast('تم حفظ التغييرات بنجاح ✓','success')"
+            style="margin-top:16px;background:var(--navy-600);color:#fff;font-family:'Cairo';font-weight:900;font-size:13px;padding:10px 22px;border-radius:10px;border:none;cursor:pointer">حفظ
+            التغييرات</button>
+        </div>
+      </div>
+      <div id="tab-wallet" style="display:none">
+        <div
+          style="background:linear-gradient(135deg,var(--navy-600),var(--navy-800));border-radius:20px;padding:24px;color:#fff;margin-bottom:16px">
+          <div style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:4px">الرصيد الحالي</div>
+          <div style="font-family:'Outfit';font-size:2.5rem;font-weight:900;color:var(--gold-400)">250.00 ج</div>
+          <div style="display:flex;gap:10px;margin-top:14px">
+            <button onclick="showToast('تم الانتقال لصفحة الشحن','success')"
+              style="background:var(--gold-400);color:var(--navy-900);font-family:'Cairo';font-weight:900;font-size:13px;padding:9px 20px;border-radius:10px;border:none;cursor:pointer">شحن
+              الرصيد</button>
+            <button
+              style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);color:#fff;font-family:'Cairo';font-weight:700;font-size:13px;padding:9px 20px;border-radius:10px;cursor:pointer">سحب</button>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--slate-200);border-radius:18px;padding:20px">
+          <h3 style="font-size:14px;font-weight:900;color:var(--navy-800);margin-bottom:14px">آخر المعاملات</h3>
+          <div
+            style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--slate-100)">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy-800)">حجز رحلة القاهرة — الأقصر</div>
+              <div style="font-size:11px;color:var(--slate-400)">10 يوليو</div>
+            </div><span style="font-family:'Outfit';font-weight:900;color:#EF4444">-161 ج</span>
+          </div>
+          <div
+            style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--slate-100)">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy-800)">شحن رصيد</div>
+              <div style="font-size:11px;color:var(--slate-400)">5 يوليو</div>
+            </div><span style="font-family:'Outfit';font-weight:900;color:#10B981">+500 ج</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy-800)">حجز رحلة القاهرة — إسكندرية</div>
+              <div style="font-size:11px;color:var(--slate-400)">20 يونيو</div>
+            </div><span style="font-family:'Outfit';font-weight:900;color:#EF4444">-180 ج</span>
+          </div>
+        </div>
+      </div>
+      <div id="tab-points" style="display:none">
+        <div
+          style="background:linear-gradient(135deg,#F59E0B,#D97706);border-radius:20px;padding:24px;color:var(--navy-900)">
+          <div style="font-size:20px;margin-bottom:8px">⭐</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:4px">نقاطك الحالية</div>
+          <div style="font-family:'Outfit';font-size:3rem;font-weight:900">850</div>
+          <div style="font-size:12px;margin-top:6px;opacity:.75">تصل إلى تذكرة مجانية عند 1000 نقطة</div>
+          <div style="margin-top:10px;height:10px;background:rgba(0,0,0,.15);border-radius:5px;overflow:hidden">
+            <div style="height:100%;background:#fff;border-radius:5px;width:85%"></div>
+          </div>
+          <div style="font-size:11px;margin-top:5px;opacity:.7">850 / 1000 نقطة</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ ADMIN PAGE ═══════════════════ -->
+  <div id="page-admin" class="page">
+    <div class="admin-header">
+      <div class="admin-inner">
+        <div class="admin-title-row">
+          <div>
+            <h1 style="font-size:22px;font-weight:900;color:#fff">لوحة تحكم الإدارة</h1>
+            <p style="color:rgba(255,255,255,.4);font-size:13px">ريل مصر — Admin Dashboard</p>
+          </div>
+          <span class="admin-badge">مدير النظام</span>
+        </div>
+      </div>
+    </div>
+    <div class="admin-body">
+      <div class="tabs" style="margin-bottom:24px">
+        <button class="tab-btn active" onclick="switchAdminTab(this,'atab-overview')">نظرة عامة</button>
+        <button class="tab-btn" onclick="switchAdminTab(this,'atab-trips')">الرحلات</button>
+        <button class="tab-btn" onclick="switchAdminTab(this,'atab-bookings')">الحجوزات</button>
+        <button class="tab-btn" onclick="switchAdminTab(this,'atab-users')">المستخدمون</button>
+      </div>
+      <div id="atab-overview">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#3B82F6,#4F46E5)"><svg
+                  viewBox="0 0 24 24">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                </svg></div><span class="stat-change"><svg viewBox="0 0 24 24">
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>+12.5%</span>
+            </div>
+            <div class="stat-val">18,432</div>
+            <div class="stat-lbl">إجمالي الحجوزات</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#10B981,#0D9488)"><svg
+                  viewBox="0 0 24 24">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg></div><span class="stat-change"><svg viewBox="0 0 24 24">
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>+8.3%</span>
+            </div>
+            <div class="stat-val">2.84M ج</div>
+            <div class="stat-lbl">الإيرادات الإجمالية</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)"><svg
+                  viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                </svg></div><span class="stat-change"><svg viewBox="0 0 24 24">
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>+22.1%</span>
+            </div>
+            <div class="stat-val">74,280</div>
+            <div class="stat-lbl">المستخدمون المسجلون</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#F59E0B,#EF4444)"><svg
+                  viewBox="0 0 24 24">
+                  <path d="M3 17l2-8h14l2 8" />
+                  <rect x="2" y="17" width="20" height="3" rx="1" />
+                  <path d="M7 17v-4h10v4" />
+                </svg></div>
+            </div>
+            <div class="stat-val">128</div>
+            <div class="stat-lbl">الرحلات النشطة</div>
+          </div>
+        </div>
+        <div class="table-card">
+          <div class="table-card-header">
+            <h3>آخر الحجوزات</h3>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>رقم الحجز</th>
+                <th>المسافر</th>
+                <th>الرحلة</th>
+                <th>السعر</th>
+                <th>الحالة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-family:'Outfit';font-weight:700;color:var(--navy-600);font-size:12px">EGR-2025-A1B2</td>
+                <td>محمد إبراهيم</td>
+                <td style="font-size:12px;color:var(--slate-500)">القاهرة ← الأقصر</td>
+                <td style="font-family:'Outfit';font-weight:900">161 ج</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مؤكد</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'Outfit';font-weight:700;color:var(--navy-600);font-size:12px">EGR-2025-E5F6</td>
+                <td>محمد إبراهيم</td>
+                <td style="font-size:12px;color:var(--slate-500)">القاهرة ← أسوان</td>
+                <td style="font-family:'Outfit';font-weight:900">520 ج</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مؤكد</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'Outfit';font-weight:700;color:var(--navy-600);font-size:12px">EGR-2024-C3D4</td>
+                <td>محمد إبراهيم</td>
+                <td style="font-size:12px;color:var(--slate-500)">القاهرة ← الإسكندرية</td>
+                <td style="font-family:'Outfit';font-weight:900">180 ج</td>
+                <td><span
+                    style="background:#F1F5F9;color:#64748B;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">منتهي</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="atab-trips" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <h2 style="font-size:17px;font-weight:900;color:var(--navy-800)">إدارة الرحلات</h2>
+          <button class="add-btn" onclick="showToast('تم فتح نموذج إضافة رحلة جديدة','success')"><svg
+              viewBox="0 0 24 24">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>إضافة رحلة</button>
+        </div>
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>القطار</th>
+                <th>من</th>
+                <th>إلى</th>
+                <th>المغادرة</th>
+                <th>المدة</th>
+                <th>الحالة</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color:var(--slate-400);font-size:11px">TR001</td>
+                <td style="font-weight:900;color:var(--navy-800)">نجم الصعيد</td>
+                <td>القاهرة</td>
+                <td>الأقصر</td>
+                <td style="font-family:'Outfit';font-weight:700">07:00</td>
+                <td style="color:var(--slate-400);font-size:12px">5س 30د</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">نشط</span>
+                </td>
+                <td>
+                  <div class="action-btns"><button class="edit-btn" onclick="showToast('تعديل الرحلة','success')"><svg
+                        viewBox="0 0 24 24">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg></button><button class="del-btn" onclick="showToast('تم حذف الرحلة','error')"><svg
+                        viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" />
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr>
+                <td style="color:var(--slate-400);font-size:11px">TR002</td>
+                <td style="font-weight:900;color:var(--navy-800)">رمسيس إكسبرس</td>
+                <td>القاهرة</td>
+                <td>الأقصر</td>
+                <td style="font-family:'Outfit';font-weight:700">09:30</td>
+                <td style="color:var(--slate-400);font-size:12px">6س 15د</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">نشط</span>
+                </td>
+                <td>
+                  <div class="action-btns"><button class="edit-btn"><svg viewBox="0 0 24 24">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg></button><button class="del-btn"><svg viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" />
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr>
+                <td style="color:var(--slate-400);font-size:11px">TR004</td>
+                <td style="font-weight:900;color:var(--navy-800)">فينيكس النوم</td>
+                <td>القاهرة</td>
+                <td>أسوان</td>
+                <td style="font-family:'Outfit';font-weight:700">20:00</td>
+                <td style="color:var(--slate-400);font-size:12px">13س</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">نشط</span>
+                </td>
+                <td>
+                  <div class="action-btns"><button class="edit-btn"><svg viewBox="0 0 24 24">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg></button><button class="del-btn"><svg viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" />
+                      </svg></button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="atab-bookings" style="display:none">
+        <div style="margin-bottom:14px">
+          <div class="search-input-wrap"><svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg><input placeholder="بحث بالاسم أو رقم الحجز…" /></div>
+        </div>
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>رقم الحجز</th>
+                <th>المسافر</th>
+                <th>الرحلة</th>
+                <th>السعر</th>
+                <th>الحالة</th>
+                <th>الدفع</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-family:'Outfit';font-weight:700;color:var(--navy-600);font-size:11px">EGR-2025-A1B2</td>
+                <td>محمد إبراهيم</td>
+                <td style="font-size:12px;color:var(--slate-500)">القاهرة → الأقصر</td>
+                <td style="font-family:'Outfit';font-weight:900">161 ج</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مؤكد</span>
+                </td>
+                <td style="font-size:12px;color:var(--slate-400)">بطاقة ائتمان</td>
+                <td><button style="background:transparent;border:none;cursor:pointer;color:var(--slate-400)">⋮</button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'Outfit';font-weight:700;color:var(--navy-600);font-size:11px">EGR-2025-E5F6</td>
+                <td>محمد إبراهيم</td>
+                <td style="font-size:12px;color:var(--slate-500)">القاهرة → أسوان</td>
+                <td style="font-family:'Outfit';font-weight:900">520 ج</td>
+                <td><span
+                    style="background:#D1FAE5;color:#065F46;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مؤكد</span>
+                </td>
+                <td style="font-size:12px;color:var(--slate-400)">بطاقة ائتمان</td>
+                <td><button style="background:transparent;border:none;cursor:pointer;color:var(--slate-400)">⋮</button>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'Outfit';font-weight:700;color:var(--navy-600);font-size:11px">EGR-2024-C3D4</td>
+                <td>محمد إبراهيم</td>
+                <td style="font-size:12px;color:var(--slate-500)">القاهرة → الإسكندرية</td>
+                <td style="font-family:'Outfit';font-weight:900">180 ج</td>
+                <td><span
+                    style="background:#F1F5F9;color:#64748B;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">منتهي</span>
+                </td>
+                <td style="font-size:12px;color:var(--slate-400)">محفظة إلكترونية</td>
+                <td><button style="background:transparent;border:none;cursor:pointer;color:var(--slate-400)">⋮</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="atab-users" style="display:none">
+        <div style="margin-bottom:14px">
+          <div class="search-input-wrap"><svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg><input placeholder="بحث بالاسم أو البريد…" /></div>
+        </div>
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>المستخدم</th>
+                <th>البريد</th>
+                <th>الهاتف</th>
+                <th>الحجوزات</th>
+                <th>النقاط</th>
+                <th>الصلاحية</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div
+                      style="width:28px;height:28px;background:var(--navy-100);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:var(--navy-600)">
+                      م</div><span style="font-weight:800;font-size:13px">محمد إبراهيم</span>
+                  </div>
+                </td>
+                <td style="font-size:12px;color:var(--slate-400)">mohammed@example.com</td>
+                <td style="font-family:'Outfit';font-size:12px">01012345678</td>
+                <td style="font-weight:900;font-family:'Outfit'">12</td>
+                <td style="color:var(--gold-500);font-weight:900;font-family:'Outfit'">850</td>
+                <td><span
+                    style="background:#DBEAFE;color:#1D4ED8;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مستخدم</span>
+                </td>
+                <td>
+                  <div class="action-btns"><button class="edit-btn"><svg viewBox="0 0 24 24">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg></button><button class="del-btn"><svg viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" />
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div
+                      style="width:28px;height:28px;background:#FCE7F3;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#BE185D">
+                      ف</div><span style="font-weight:800;font-size:13px">فاطمة أحمد</span>
+                  </div>
+                </td>
+                <td style="font-size:12px;color:var(--slate-400)">fatma@example.com</td>
+                <td style="font-family:'Outfit';font-size:12px">01098765432</td>
+                <td style="font-weight:900;font-family:'Outfit'">8</td>
+                <td style="color:var(--gold-500);font-weight:900;font-family:'Outfit'">560</td>
+                <td><span
+                    style="background:#DBEAFE;color:#1D4ED8;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مستخدم</span>
+                </td>
+                <td>
+                  <div class="action-btns"><button class="edit-btn"><svg viewBox="0 0 24 24">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg></button><button class="del-btn"><svg viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" />
+                      </svg></button></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div
+                      style="width:28px;height:28px;background:#F3E8FF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#7E22CE">
+                      أ</div><span style="font-weight:800;font-size:13px">أحمد محمود</span>
+                  </div>
+                </td>
+                <td style="font-size:12px;color:var(--slate-400)">ahmed@example.com</td>
+                <td style="font-family:'Outfit';font-size:12px">01155443322</td>
+                <td style="font-weight:900;font-family:'Outfit'">3</td>
+                <td style="color:var(--gold-500);font-weight:900;font-family:'Outfit'">200</td>
+                <td><span
+                    style="background:#F3E8FF;color:#7E22CE;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:800">مدير</span>
+                </td>
+                <td>
+                  <div class="action-btns"><button class="edit-btn"><svg viewBox="0 0 24 24">
+                        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
+                      </svg></button><button class="del-btn"><svg viewBox="0 0 24 24">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2" />
+                      </svg></button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ LOGIN PAGE ═══════════════════ -->
+  <div id="page-login" class="page">
+    <div class="auth-page">
+      <div class="auth-left">
+        <div class="logo" onclick="showPage('home')" style="margin-bottom:40px;cursor:pointer">
+          <div class="logo-icon"><svg viewBox="0 0 24 24">
+              <path d="M3 17l2-8h14l2 8" />
+              <rect x="2" y="17" width="20" height="3" rx="1" />
+              <path d="M7 17v-4h10v4" />
+              <circle cx="7" cy="20.5" r="1.5" />
+              <circle cx="17" cy="20.5" r="1.5" />
+            </svg></div>
+          <div class="logo-text"><span style="color:#fff">ريل مصر</span><span>RAIL EGYPT</span></div>
+        </div>
+        <div class="auth-left-content">
+          <h2>أهلاً بعودتك<br><span class="gold-text">إلى ريل مصر</span></h2>
+          <p>سجل دخولك للوصول إلى حجوزاتك وتذاكرك ومتابعة رحلاتك القادمة.</p>
+          <div class="auth-left-stats">
+            <div class="auth-stat">
+              <div class="auth-stat-num">120+</div>
+              <div class="auth-stat-lbl">رحلة يومية</div>
+            </div>
+            <div class="auth-stat">
+              <div class="auth-stat-num">2M+</div>
+              <div class="auth-stat-lbl">مسافر</div>
+            </div>
+            <div class="auth-stat">
+              <div class="auth-stat-num">98%</div>
+              <div class="auth-stat-lbl">رضا العملاء</div>
+            </div>
+            <div class="auth-stat">
+              <div class="auth-stat-num">50+</div>
+              <div class="auth-stat-lbl">محطة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="auth-right">
+        <div class="auth-form-wrap">
+          <h1 class="auth-title">تسجيل الدخول</h1>
+          <p class="auth-sub">أدخل بياناتك للدخول إلى حسابك</p>
+          <div class="form-field"><label>البريد الإلكتروني</label>
+            <div class="inp-wrap"><svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg><input type="email" value="mohammed@example.com" placeholder="mail@example.com" /></div>
+          </div>
+          <div class="form-field">
+            <div style="display:flex;justify-content:space-between;margin-bottom:5px"><label style="margin:0">كلمة
+                المرور</label><span class="forgot">نسيت كلمة المرور؟</span></div>
+            <div class="inp-wrap"><svg viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg><input type="password" value="••••••••" placeholder="كلمة المرور" /></div>
+          </div>
+          <button class="submit-btn" onclick="loginDemo()">تسجيل الدخول</button>
+          <div class="or-divider">
+            <div class="or-line"></div><span class="or-txt">أو</span>
+            <div class="or-line"></div>
+          </div>
+          <button class="google-btn"><svg width="18" height="18" viewBox="0 0 24 24">
+              <path fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+              <path fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+            </svg>المتابعة بـ Google</button>
+          <p class="auth-switch">ليس لديك حساب؟ <a onclick="showPage('register')">إنشاء حساب جديد</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ REGISTER PAGE ═══════════════════ -->
+  <div id="page-register" class="page"
+    style="background:var(--slate-50);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:80px 16px 40px">
+    <div style="width:100%;max-width:480px">
+      <div class="logo" onclick="showPage('home')" style="margin-bottom:24px;cursor:pointer">
+        <div class="logo-icon"><svg viewBox="0 0 24 24">
+            <path d="M3 17l2-8h14l2 8" />
+            <rect x="2" y="17" width="20" height="3" rx="1" />
+            <path d="M7 17v-4h10v4" />
+            <circle cx="7" cy="20.5" r="1.5" />
+            <circle cx="17" cy="20.5" r="1.5" />
+          </svg></div>
+        <div class="logo-text"><span style="color:var(--navy-800)">ريل مصر</span><span>RAIL EGYPT</span></div>
+      </div>
+      <div
+        style="background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+        <h1 style="font-size:24px;font-weight:900;color:var(--navy-800);margin-bottom:4px">إنشاء حساب جديد</h1>
+        <p style="color:var(--slate-400);font-size:13px;margin-bottom:22px">انضم إلى ملايين المسافرين عبر مصر</p>
+        <div style="margin-bottom:14px"><label
+            style="display:block;font-size:12px;font-weight:700;color:var(--slate-600);margin-bottom:5px">الاسم
+            الكامل</label><input
+            style="width:100%;background:var(--slate-50);border:1.5px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+            placeholder="محمد إبراهيم" /></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+          <div><label
+              style="display:block;font-size:12px;font-weight:700;color:var(--slate-600);margin-bottom:5px">البريد
+              الإلكتروني</label><input
+              style="width:100%;background:var(--slate-50);border:1.5px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+              placeholder="mail@example.com" /></div>
+          <div><label style="display:block;font-size:12px;font-weight:700;color:var(--slate-600);margin-bottom:5px">رقم
+              الهاتف</label><input
+              style="width:100%;background:var(--slate-50);border:1.5px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+              placeholder="01012345678" /></div>
+        </div>
+        <div style="margin-bottom:14px"><label
+            style="display:block;font-size:12px;font-weight:700;color:var(--slate-600);margin-bottom:5px">كلمة
+            المرور</label><input type="password"
+            style="width:100%;background:var(--slate-50);border:1.5px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+            placeholder="8 أحرف على الأقل" value="••••••••" /></div>
+        <label
+          style="display:flex;align-items:start;gap:10px;cursor:pointer;margin-bottom:18px;font-size:12px;color:var(--slate-600)"><input
+            type="checkbox" checked style="margin-top:2px;accent-color:var(--navy-600)" />أوافق على <span
+            style="color:var(--navy-600);font-weight:700">شروط الاستخدام</span> و<span
+            style="color:var(--navy-600);font-weight:700">سياسة الخصوصية</span></label>
+        <button
+          onclick="showToast('تم إنشاء حسابك بنجاح! مرحباً بك 🎉','success');setTimeout(()=>showPage('dashboard'),1000)"
+          style="width:100%;background:var(--gold-400);color:var(--navy-900);font-family:'Cairo';font-weight:900;font-size:15px;padding:14px;border-radius:12px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(232,184,75,.3)">إنشاء
+          الحساب</button>
+        <p style="text-align:center;font-size:13px;color:var(--slate-400);margin-top:16px">لديك حساب؟ <a
+            onclick="showPage('login')" style="color:var(--navy-600);font-weight:800;cursor:pointer">تسجيل الدخول</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CONTACT PAGE ═══════════════════ -->
+  <div id="page-contact" class="page">
+    <div class="contact-hero">
+      <div
+        style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;margin-bottom:16px">
+        💬</div>
+      <h1 style="font-size:2.2rem;font-weight:900;color:#fff;margin-bottom:10px">تواصل معنا</h1>
+      <p style="color:rgba(255,255,255,.65);font-size:15px;max-width:480px;margin:0 auto;line-height:1.7">فريق دعمنا
+        متاح 24/7 للإجابة على جميع استفساراتك وتقديم المساعدة</p>
+    </div>
+    <div class="contact-body">
+      <div>
+        <div class="info-card">
+          <div class="info-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 9.5a2 2 0 012-2.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L9.91 14a16 16 0 006 6l.35-.35a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg></div>
+          <div>
+            <div class="info-lbl">الهاتف</div>
+            <div class="info-val">19370</div>
+            <div class="info-sub">الساعة 8 ص — 10 م</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></div>
+          <div>
+            <div class="info-lbl">البريد الإلكتروني</div>
+            <div class="info-val">support@railegypt.gov.eg</div>
+            <div class="info-sub">نرد خلال 24 ساعة</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div>
+            <div class="info-lbl">العنوان</div>
+            <div class="info-val">ميدان رمسيس، القاهرة</div>
+            <div class="info-sub">الدور الثالث، مبنى الإدارة</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg></div>
+          <div>
+            <div class="info-lbl">ساعات العمل</div>
+            <div class="info-val">السبت — الخميس</div>
+            <div class="info-sub">من 8 صباحاً حتى 10 مساءً</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h2 style="font-size:20px;font-weight:900;color:var(--navy-800);margin-bottom:22px">أرسل رسالتك</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+          <div><label
+              style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">الاسم*</label><input
+              style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+              placeholder="محمد إبراهيم" /></div>
+          <div><label
+              style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">البريد
+              الإلكتروني*</label><input
+              style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none"
+              placeholder="mail@example.com" /></div>
+        </div>
+        <div style="margin-bottom:14px"><label
+            style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">الموضوع</label><select
+            style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none;appearance:none">
+            <option>استفسار عن الحجز</option>
+            <option>مشكلة في الدفع</option>
+            <option>إلغاء أو تعديل تذكرة</option>
+            <option>شكوى</option>
+          </select></div>
+        <div style="margin-bottom:18px"><label
+            style="display:block;font-size:12px;font-weight:700;color:var(--slate-500);margin-bottom:5px">الرسالة*</label><textarea
+            rows="5"
+            style="width:100%;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:11px 14px;font-family:'Cairo';font-size:13px;font-weight:600;outline:none;resize:vertical"
+            placeholder="اكتب رسالتك هنا…"></textarea></div>
+        <button onclick="showToast('تم إرسال رسالتك بنجاح! سنرد عليك خلال 24 ساعة ✓','success')"
+          style="width:100%;background:var(--navy-600);color:#fff;font-family:'Cairo';font-weight:900;font-size:15px;padding:14px;border-radius:12px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s">📨
+          إرسال الرسالة</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <svg id="toast-icon" viewBox="0 0 24 24"></svg>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script>
+    // ── State ──────────────────────────────────────
+    let currentPage = 'home';
+    let selectedClassGlobal = 'درجة مكيفة';
+    let selectedSeat = null;
+    let bookingStep = 0;
+    let activeCar = 1;
+    const OCCUPIED = [2, 5, 8, 11, 14, 17, 20, 23, 26, 30, 33, 36];
+
+    // ── Navigation ─────────────────────────────────
+    function showPage(p) {
+      document.querySelectorAll('.page').forEach(el => el.classList.remove('active'));
+      document.getElementById('page-' + p).classList.add('active');
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('on-hero', p === 'home');
+      nav.classList.toggle('scrolled', p !== 'home');
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const m = { home: 'nav-home', search: 'nav-search', dashboard: 'nav-dash', contact: 'nav-contact', admin: 'nav-admin' };
+      if (m[p]) document.getElementById(m[p])?.classList.add('active');
+      window.scrollTo(0, 0);
+      currentPage = p;
+      if (p === 'search') renderTrips();
+      if (p === 'trip') renderSeats();
+      if (p === 'ticket') drawQR();
+      if (p === 'booking') { bookingStep = 0; renderBookingStep(); }
+      // Logo color
+      const lm = document.getElementById('logo-main');
+      if (lm) lm.style.color = (p === 'home') ? 'transparent' : 'var(--navy-800)';
+    }
+
+    // ── Scroll nav ─────────────────────────────────
+    window.addEventListener('scroll', () => {
+      if (currentPage !== 'home') return;
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 40) {
+        nav.classList.add('scrolled');
+        nav.classList.remove('on-hero');
+      } else {
+        nav.classList.remove('scrolled');
+        nav.classList.add('on-hero');
+      }
+    });
+
+    // ── Toast ──────────────────────────────────────
+    let toastTimer;
+    function showToast(msg, type = 'success') {
+      const t = document.getElementById('toast');
+      const i = document.getElementById('toast-icon');
+      const m = document.getElementById('toast-msg');
+      m.textContent = msg;
+      t.className = 'toast ' + type + ' show';
+      i.innerHTML = type === 'success'
+        ? '<polyline points="20 6 9 17 4 12"/>'
+        : '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>';
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+    }
+
+    // ── Swap stations ──────────────────────────────
+    function swapStations() {
+      const f = document.getElementById('h-from');
+      const t = document.getElementById('h-to');
+      const tmp = f.value; f.value = t.value; t.value = tmp;
+    }
+
+    // ── Dark mode ──────────────────────────────────
+    let dark = false;
+    function toggleTheme() {
+      dark = !dark;
+      document.documentElement.style.setProperty('--slate-50', dark ? '#040C1D' : '#F8FAFC');
+      document.documentElement.style.setProperty('--slate-100', dark ? '#0E203E' : '#F1F5F9');
+      document.documentElement.style.setProperty('--slate-200', dark ? '#1E3A5F' : '#E2E8F0');
+      document.body.style.background = dark ? '#040C1D' : '';
+      document.body.style.color = dark ? '#F1F5F9' : '';
+      const btn = document.querySelector('.theme-btn');
+      btn.textContent = dark ? '☀️' : '🌙';
+      showToast(dark ? 'تم تفعيل الوضع الداكن 🌙' : 'تم تفعيل الوضع الفاتح ☀️', 'success');
+    }
+
+    // ── Render trips ───────────────────────────────
+    const TRIPS_DATA = [
+      { num: '981', name: 'نجم الصعيد', type: 'فائق السرعة', typeClass: 'type-express', dep: '07:00', arr: '12:30', dur: '5س 30د', prices: [272, 161, 80], popular: true, discount: 15, seats: 12 },
+      { num: '902', name: 'رمسيس إكسبرس', type: 'سريع', typeClass: 'type-fast', dep: '09:30', arr: '15:45', dur: '6س 15د', prices: [285, 165, 80], popular: false, discount: 0, seats: 34 },
+      { num: '1901', name: 'النيل الأزرق', type: 'سريع', typeClass: 'type-fast', dep: '14:00', arr: '20:00', dur: '6س', prices: [300, 175, 90], popular: true, discount: 0, seats: 40 },
+      { num: '1055', name: 'فينيكس النوم', type: 'نوم', typeClass: 'type-normal', dep: '20:00', arr: '09:00', dur: '13س', prices: [520, 380, 220], popular: false, discount: 20, seats: 8 },
+      { num: '923', name: 'الأهرام', type: 'فائق السرعة', typeClass: 'type-express', dep: '06:00', arr: '08:30', dur: '2س 30د', prices: [180, 110, 55], popular: true, discount: 0, seats: 18 },
+      { num: '87', name: 'الصقر', type: 'عادي', typeClass: 'type-normal', dep: '10:00', arr: '12:20', dur: '2س 20د', prices: [170, 100, 50], popular: false, discount: 10, seats: 22 },
+    ];
+    function renderTrips() {
+      const container = document.getElementById('trips-list');
+      if (!container) return;
+      container.innerHTML = TRIPS_DATA.map((t, i) => `
+    <div class="trip-card" onclick="showPage('trip')">
+      <div class="trip-top">
+        <div class="train-id">
+          <div class="train-num">${t.num}</div>
+          <div>
+            <span class="train-info">${t.name}</span>
+            <span class="train-type ${t.typeClass}">${t.type}</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px">
+          ${t.popular ? '<span class="badge-popular">⭐ شعبي</span>' : ''}
+          ${t.discount ? `<span class="badge-discount">🏷️ خصم ${t.discount}%</span>` : ''}
+        </div>
+      </div>
+      <div class="trip-body">
+        <div class="time-row">
+          <div class="time-end">
+            <div class="time-big">${t.dep}</div>
+            <div class="time-city">القاهرة</div>
+            <div class="time-station">محطة مصر</div>
+          </div>
+          <div class="time-mid">
+            <div class="duration-lbl">⏱ ${t.dur}</div>
+            <div class="duration-line"></div>
+            <div class="direct-lbl">مباشر</div>
+          </div>
+          <div class="time-end" style="text-align:left">
+            <div class="time-big">${t.arr}</div>
+            <div class="time-city">الأقصر</div>
+            <div class="time-station">محطة الأقصر</div>
+          </div>
+        </div>
+        <div class="amenities-row">
+          <span class="amenity"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>واي فاي</span>
+          <span class="amenity"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>مطعم</span>
+          <span class="amenity"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>تكييف</span>
+          <div class="seats-left">👥 ${t.seats} مقعد متاح</div>
+        </div>
+      </div>
+      <div class="trip-bottom">
+        <div class="classes-row">
+          <span class="class-badge class-first">درجة أولى — ${t.prices[0]} ج</span>
+          <span class="class-badge class-ac">مكيفة — ${t.prices[1]} ج</span>
+          <span class="class-badge class-second">ثانية — ${t.prices[2]} ج</span>
+        </div>
+        <div>
+          ${t.discount ? `<div class="price-old">${Math.round(t.prices[1] / (1 - t.discount / 100))} ج</div>` : ''}
+          <div class="price-new">${t.prices[1]} ج</div>
+          <div class="price-per">للمسافر</div>
+        </div>
+        <button class="select-btn">اختر <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+      </div>
+    </div>
+  `).join('');
+    }
+
+    // ── Class selection on detail page ─────────────
+    function selectClass(el, cls, price) {
+      document.querySelectorAll('.class-btn').forEach(b => {
+        b.classList.remove('selected');
+        b.querySelector('.check')?.remove();
+      });
+      el.classList.add('selected');
+      if (!el.querySelector('.check')) {
+        const c = document.createElement('div');
+        c.className = 'check';
+        c.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
+        el.prepend(c);
+      }
+      selectedClassGlobal = cls;
+      const pp = document.getElementById('detail-price');
+      if (pp) pp.textContent = price + ' ج';
+      showToast('تم اختيار ' + cls, 'success');
+    }
+
+    // ── Seat rendering ─────────────────────────────
+    function renderSeats(car = 1) {
+      activeCar = car;
+      const grid = document.getElementById('seat-grid');
+      if (!grid) return;
+      let html = '<div class="seat-cols-header"><span>A</span><span></span><span>B</span><span>C</span></div>';
+      for (let r = 0; r < 10; r++) {
+        html += '<div class="seat-row">';
+        const seatA = r * 3 + 1 + ((car - 1) * 30);
+        const seatB = r * 3 + 2 + ((car - 1) * 30);
+        const seatC = r * 3 + 3 + ((car - 1) * 30);
+        [seatA, null, seatB, seatC].forEach((s, ci) => {
+          if (s === null) { html += `<div class="aisle-num">${r + 1}</div>`; return; }
+          const occ = OCCUPIED.includes(s % 40);
+          const sel = selectedSeat === s;
+          const cls = sel ? 'sel' : occ ? 'oc' : 'av';
+          html += `<button class="seat ${cls}" onclick="pickSeat(${s})">${s}</button>`;
+        });
+        html += '</div>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function pickSeat(n) {
+      const el = document.querySelector(`.seat-row button[onclick="pickSeat(${n})"]`);
+      if (!el || el.classList.contains('oc')) return;
+      selectedSeat = n;
+      renderSeats(activeCar);
+      const sum = document.getElementById('seat-summary');
+      const txt = document.getElementById('seat-summary-text');
+      if (sum && txt) { sum.style.display = 'flex'; txt.textContent = `عربة ${activeCar} — مقعد ${n}`; }
+      showToast(`تم اختيار مقعد رقم ${n}`, 'success');
+    }
+
+    function switchCar(n, btn) {
+      document.querySelectorAll('.car-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedSeat = null;
+      const sum = document.getElementById('seat-summary');
+      if (sum) sum.style.display = 'none';
+      renderSeats(n);
+    }
+
+    // ── QR Code ────────────────────────────────────
+    function drawQR() {
+      const c = document.getElementById('qr-canvas');
+      if (!c) return;
+      const ctx = c.getContext('2d');
+      const size = 21; const cell = Math.floor(98 / size);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, 98, 98);
+      // Corner markers
+      const corners = [[0, 0], [0, 14], [14, 0]];
+      corners.forEach(([cr, cc]) => {
+        ctx.fillStyle = '#0F172A';
+        ctx.fillRect(cc * cell, cr * cell, 7 * cell, 7 * cell);
+        ctx.fillStyle = '#fff';
+        ctx.fillRect((cc + 1) * cell, (cr + 1) * cell, 5 * cell, 5 * cell);
+        ctx.fillStyle = '#0F172A';
+        ctx.fillRect((cc + 2) * cell, (cr + 2) * cell, 3 * cell, 3 * cell);
+      });
+      // Data pattern
+      const seed = 'EGR-2025-A1B2';
+      for (let r = 0; r < size; r++) for (let c2 = 0; c2 < size; c2++) {
+        if ((r < 7 && c2 < 7) || (r < 7 && c2 >= 14) || (r >= 14 && c2 < 7)) continue;
+        const val = (r * 31 + c2 * 17 + (seed.charCodeAt((r + c2) % seed.length) || 0)) % 3;
+        if (val === 0) { ctx.fillStyle = '#0F172A'; ctx.fillRect(c2 * cell, r * cell, cell, cell); }
+      }
+    }
+
+    // ── Booking steps ──────────────────────────────
+    const bookingRows = [
+      ['الاسم الكامل', 'محمد إبراهيم'], ['رقم الهوية', '28501010123456'],
+      ['الهاتف', '01012345678'], ['البريد الإلكتروني', 'mohammed@example.com'],
+      ['رقم المقعد', 'عربة 2 — مقعد 14'], ['الدرجة', 'درجة مكيفة'], ['إجمالي السعر', '161 ج.م'],
+    ];
+    const summaryRows = [
+      ['القطار', 'نجم الصعيد'], ['من', 'القاهرة'], ['إلى', 'الأقصر'],
+      ['المغادرة', '07:00'], ['الوصول', '12:30'], ['المدة', '5س 30د'],
+      ['الدرجة', 'درجة مكيفة'], ['المقعد', 'عربة 2 — 14'],
+    ];
+    function renderBookingStep() {
+      [0, 1, 2].forEach(i => {
+        document.getElementById('bstep-' + i).style.display = i === bookingStep ? 'block' : 'none';
+        const el = document.getElementById('step-' + i);
+        if (!el) return;
+        if (i < bookingStep) { el.style.background = '#10B981'; el.style.color = '#fff'; el.innerHTML = '✓'; }
+        else if (i === bookingStep) { el.style.background = 'var(--gold-400)'; el.style.color = 'var(--navy-900)'; el.textContent = i + 1; }
+        else { el.style.background = 'rgba(255,255,255,.15)'; el.style.color = 'rgba(255,255,255,.6)'; el.textContent = i + 1; }
+      });
+      // Review rows
+      if (bookingStep === 1) {
+        document.getElementById('review-rows').innerHTML = bookingRows.map(([k, v]) =>
+          `<div style="display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--slate-100)"><span style="font-size:13px;color:var(--slate-500)">${k}</span><span style="font-size:13px;font-weight:800;color:var(--navy-800)">${v}</span></div>`
+        ).join('');
+      }
+      // Summary
+      document.getElementById('booking-summary-rows').innerHTML = summaryRows.map(([k, v]) =>
+        `<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:10px"><span style="color:var(--slate-400)">${k}</span><span style="font-weight:800;color:var(--navy-800)">${v}</span></div>`
+      ).join('') + `<div style="padding-top:12px;border-top:1px solid var(--slate-200);display:flex;justify-content:space-between"><span style="font-weight:900;color:var(--navy-800)">الإجمالي</span><span style="font-family:'Outfit';font-size:1.2rem;font-weight:900;color:var(--gold-500)">161 ج.م</span></div>`;
+    }
+
+    function goBookingStep(n) {
+      bookingStep = n;
+      renderBookingStep();
+      window.scrollTo(0, 200);
+    }
+
+    function selectPayment(btn) {
+      document.querySelectorAll('.pay-opt').forEach(b => {
+        b.style.borderColor = 'var(--slate-200)';
+        b.style.background = '#fff';
+        b.style.color = 'var(--slate-600)';
+      });
+      btn.style.borderColor = 'var(--navy-600)';
+      btn.style.background = '#EEF2FF';
+      btn.style.color = 'var(--navy-700)';
+    }
+
+    function confirmBooking() {
+      showToast('تم تأكيد حجزك بنجاح! 🎉', 'success');
+      setTimeout(() => showPage('ticket'), 900);
+    }
+
+    function loginDemo() {
+      showToast('مرحباً بك! تم تسجيل الدخول بنجاح ✓', 'success');
+      setTimeout(() => showPage('dashboard'), 800);
+    }
+
+    // ── Dashboard tab switching ─────────────────────
+    function switchDashTab(btn, tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      ['tab-bookings', 'tab-profile', 'tab-wallet', 'tab-points'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = id === tabId ? 'block' : 'none';
+      });
+    }
+
+    // ── Admin tab switching ─────────────────────────
+    function switchAdminTab(btn, tabId) {
+      // Find siblings in same tabs container
+      btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      ['atab-overview', 'atab-trips', 'atab-bookings', 'atab-users'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = id === tabId ? 'block' : 'none';
+      });
+    }
+
+    // ── Init ───────────────────────────────────────
+    document.getElementById('h-date').value = new Date().toISOString().split('T')[0];
+    renderTrips();
+  </script>
+</body>
+
+</html>
